@@ -1,0 +1,31 @@
+.vertical-table table thead {
+	display: none;
+}
+.vertical-table table {
+	display: block;
+}
+.vertical-table table tbody{
+	display: flex;
+}
+.vertical-table table tbody tr{
+	float: left;
+}
+.vertical-table table tbody tr:last-child{
+	flex-grow: 1;
+}
+.vertical-table table tbody tr th{
+	display: block;
+	text-align: left;
+	border-bottom: none !important;
+}
+.vertical-table table tbody tr th:nth-child(odd), .vertical-table table tbody tr td:nth-child(odd){
+    background-color: #f4f5f7;
+}
+.vertical-table table tbody tr td{
+	display:block;
+    min-height: 23px;
+    border-bottom: none !important;
+}
+.vertical-table .refresh-module-id {
+	display: block;
+}
