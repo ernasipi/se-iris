@@ -38,3 +38,7 @@
 .vertical-table .refresh-module-id {
 	display: block;
 }
+
+.columnMacro {
+	display: inline-block !important;
+}
