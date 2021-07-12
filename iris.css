@@ -39,6 +39,6 @@
 	display: block;
 }
 
-.columnMacro[style] {
+.columnMacro[style*="width"] {
 	display: inline-block !important;
 }
