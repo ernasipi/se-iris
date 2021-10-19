@@ -1,2 +1,19 @@
 .float-flex { display: flex !important; flex-direction: row; }
 .float-flex .panel { margin-right: 1%; }
+
+.expand-container {
+  padding: 0px;  
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 10px 0;
+  border: 1px solid #dfe1e5;
+  border-radius: 3px;
+}
+
+.expand-container .expand-control { 
+  margin: 0; 
+  padding: 10px;
+  border-bottom: 1px solid #ddd; 
+}
+
+.expand-container .expand-content { background-color: white; }
