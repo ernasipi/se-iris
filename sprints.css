@@ -26,3 +26,9 @@
   padding: 0 0 10px 20px;
   margin: 0;
 }
+
+.jira-issues {
+    width: calc(100% + 20px) !important;
+    margin: 0 -10px;
+}
+.jira-issues tr:not([class]) { display: none; }
