@@ -1,2 +1,2 @@
-.expand-container .expand-content { display: flex; flex-direction: row; }
+.expand-container .expand-content { display: flex !important; flex-direction: row; }
 .expand-container .expand-content .panel { margin-right: 1%; }
