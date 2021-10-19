@@ -16,4 +16,13 @@
   border-bottom: 1px solid #ddd; 
 }
 
-.expand-container .expand-content { background-color: white; }
+.expand-container .expand-control .expand-control-text { 
+  color: #333;
+  font-weight: bold;
+}
+
+.expand-container .expand-content { 
+  background-color: white;
+  padding: 0 0 10px 20px;
+  margin: 0;
+}
