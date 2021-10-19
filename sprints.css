@@ -1,2 +1,2 @@
-.float-3 { display: flex !important; flex-direction: row; }
-.float-3 .panel { margin-right: 1%; }
+.float-flex { display: flex !important; flex-direction: row; }
+.float-flex .panel { margin-right: 1%; }
