@@ -1,8 +1,13 @@
 $( document ).ready(function() {
 	$(".panel").each(function() {
 		var header = $(this).children(".panelHeader").text();
+		var innerHeader = $(this).children("H1").text();
 		if (header == "Project Scope" || header == "Project organizatioon") {
 			$(this).children(".panelContent").addClass("vertical-table");
+		} 
+		
+		if (innerHeader == "Deliveries") {
+			$(this).children(".panelContent").addClass("delivery-tables");
 		}
 	});
 });
