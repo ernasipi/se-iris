@@ -1,5 +1,6 @@
 var EpicHeadings = [];
 var EpicData = [];
+var loadedJiraData = false;
 
 $( document ).ready(function() {
 	$(".panel").each(function() {
@@ -10,27 +11,25 @@ $( document ).ready(function() {
 	});
 });
 
-
+function findEpicData(key) {
+	let result = null;
+	for (let index of EpicData) {
+		if (index["key"] == key) {
+			result = index;
+			break;
+		}
+	}
+	return result;
+}
 
 function updateEpicData() {
 	$(".panel .aui td").each(function() {
 		var content = $(this).text().trim();
-		if (content.substring(0,3) == "TI-") {
-			
-			let epicData = findEpicData(content);
-			console.log(epicData);
+		if (content.substring(0,3) == "TI-") {			
+			let data = findEpicData(content);
+			$(this).html(data["epic name"]);
 		}
 	});
-}
-
-function findEpicData(key) {
-	EpicData.forEach(function (index) {
-		if (index["key"] == key) {
-			
-		}
-		return index;
-	});
-	return null;
 }
 
 function formatDate(date) {
@@ -127,6 +126,10 @@ onElementInserted('body', '.jira-issues', function(element) {
 				
 			}
 		});
+		
+		loadedJiraData = true;
+	}
+	if (loadedJiraData) {
 		updateEpicData();
 	}
 });
