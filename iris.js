@@ -7,6 +7,13 @@ $( document ).ready(function() {
 		let header = $(this).children(".panelHeader").text();
 		if (header == "Project Scope" || header == "Project organizatioon") {
 			$(this).children(".panelContent").addClass("vertical-table");
+		} else if (header == "Technical information") {
+			$(this).children(".panelContent").addClass("tech-info-table");
+		}
+
+		let headerAlt = $(this).children(".panelContent").children("h1").text();
+		if (headerAlt == "Deliveries") {
+			$(this).addClass("delivery-table");
 		}
 	});
 });
