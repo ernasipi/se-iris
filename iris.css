@@ -18,7 +18,6 @@
 }
 .vertical-table table tbody tr th{
 	display: block;
-	min-height: 24px;
 	text-align: left;
 	border-bottom: none !important;
 	white-space: nowrap;
@@ -27,11 +26,11 @@
 	letter-spacing: 0.5px;
 }
 .vertical-table table tbody tr th:nth-child(odd), .vertical-table table tbody tr td:nth-child(odd){
-	background-color: #f4f5f7;
+    background-color: #f4f5f7;
 }
 .vertical-table table tbody tr td{
 	display:block;
-	min-height: 24px;
+	min-height: 23px;
 	border-bottom: none !important;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -40,6 +39,13 @@
 	display: block;
 }
 
-.columnMacro[style*="width"] {
-	display: inline-block !important;
+.delivery-table .panel .wiki-content a,
+.delivery-table .panel tr > td,
+.delivery-table .panel tr > th {
+	/*white-space: nowrap !important;*/
+}
+
+.tech-info-table {
+	max-height: 300px;
+	overflow: auto;
 }
