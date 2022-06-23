@@ -24,6 +24,7 @@
 	text-overflow: ellipsis;
 	font-weight: bold;
 	letter-spacing: 0.5px;
+	min-height: 24px;	
 }
 .vertical-table table tbody tr th:nth-child(odd), .vertical-table table tbody tr td:nth-child(odd){
     background-color: #f4f5f7;
