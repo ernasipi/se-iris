@@ -34,24 +34,27 @@ function updateEpicData() {
 		var content = $(this).text().trim();
 		if (content.substring(0,3) == "TI-") {			
 			let data = findEpicData(content);
-			let epicName = data["epic name"];
-			let epicSplit = epicName.split(" - ");
-			if (epicSplit.length == 2) {
-				let isBDBF = false;
-				let isNr = false;
-				let re = new RegExp("^([0-9]{6,})$");
-				if (epicSplit[0].substring(0,2).toLowerCase() == "bd" || epicSplit[0].substring(0,2).toLowerCase() == "bf") {
-					isBDBF = true;
+			if (data != null) {
+				let epicName = data["epic name"];
+				let epicSplit = epicName.split(" - ");
+				if (epicSplit.length == 2) {
+					let isBDBF = false;
+					let isNr = false;
+					let re = new RegExp("^([0-9]{6,})$");
+					if (epicSplit[0].substring(0,2).toLowerCase() == "bd" || epicSplit[0].substring(0,2).toLowerCase() == "bf") {
+						isBDBF = true;
+					}
+					if (re.test(epicSplit[0].substring(2,8))) {
+						isNr = true;
+					}
+					if (isBDBF && isNr) {
+						epicName = epicSplit[1];
+					}
+					console.log(isBDBF & isNr);
 				}
-				if (re.test(epicSplit[0].substring(2,8))) {
-					isNr = true;
-				}
-				if (isBDBF && isNr) {
-					epicName = epicSplit[1];
-				}
-				console.log(isBDBF & isNr);
+				$(this).html(epicName);
 			}
-			$(this).html(epicName);
+			
 		}
 	});
 }
