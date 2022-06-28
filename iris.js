@@ -104,7 +104,9 @@ onElementInserted('body', '.jira-issues', function(element) {
 		if (newDate !== null) {
 			$(this).text(newDate);
 		}
+	});
 
+	$(element).find("td a").each(function() {
 		var content = $(this).text().trim();
 		content = content.replace("As Designed", "AsD");
 		content = content.replace("As Built", "AsB");
