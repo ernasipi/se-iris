@@ -31,7 +31,7 @@
 }
 .vertical-table table tbody tr td{
 	display:block;
-	min-height: 23px;
+	min-height: 24px;
 	border-bottom: none !important;
 	white-space: nowrap;
 	text-overflow: ellipsis;
